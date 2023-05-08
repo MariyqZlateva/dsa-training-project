@@ -3,23 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mariazlateva</groupId>
+        <artifactId>dsa-training-project</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.mariazlateva</groupId>
-    <artifactId>dsa-training-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>data-structures</module>
-        <module>algorithms</module>
-        <module>common</module>
-        <module>algorithms-graph</module>
-    </modules>
+    <artifactId>common</artifactId>
 
     <properties>
-        <java.version>17</java.version>
-        <encoding.version>UTF-8</encoding.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>${encoding.version}</project.build.sourceEncoding>
