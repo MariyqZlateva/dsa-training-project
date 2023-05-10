@@ -51,25 +51,13 @@ public class StackMain {
         iteratorPrinter(iterator);
 
         try {
-            Integer v = stack.peek();
+            System.out.println();
+            ThreadColorUtil.printInColor("EmptyStackException sim with stack.peek() with empty stack", ThreadColor.ANSI_RED);
+            stack.peek();
         } catch (EmptyStackException e) {
-            e.printStackTrace();
+            ThreadColorUtil.printInColor("EmptyStackException message: " + e.getMessage(), ThreadColor.ANSI_RED);
+            System.out.println();
         }
-        System.out.println();
-
-        try {
-            Integer v = stack.pop();
-        } catch (EmptyStackException e) {
-            e.printStackTrace();
-        }
-        System.out.println();
-
-        try {
-            Thread.sleep(1000L);
-        } catch (InterruptedException e) {
-            System.out.println("Thread interrupted");
-        }
-        System.out.println();
 
         title = "\t\t\t<<< Execution of '" + stack.getClass().getSimpleName() + "' simulation completed >>>";
         ThreadColorUtil.printInColor(title, ThreadColor.ANSI_GREEN);
