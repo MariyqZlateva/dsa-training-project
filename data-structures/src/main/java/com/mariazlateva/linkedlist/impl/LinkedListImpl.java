@@ -4,6 +4,9 @@ import com.mariazlateva.iterator.Iterator;
 import com.mariazlateva.iterator.impl.ListIterator;
 import com.mariazlateva.linkedlist.LinkedList;
 import com.mariazlateva.node.listnode.ListNode;
+import com.mariazlateva.node.listnode.impl.ListNodeImpl;
+
+import java.util.NoSuchElementException;
 
 public class LinkedListImpl<T> implements LinkedList<T> {
 
@@ -20,32 +23,76 @@ public class LinkedListImpl<T> implements LinkedList<T> {
 
     @Override
     public void addFirst(T item) {
-
+        if (isEmpty()) {
+            head = new ListNodeImpl<>(item);
+            tail = head;
+        } else {
+            ListNode<T> newNode = new ListNodeImpl<>(item);
+            newNode.setNext(head);
+            head.setPrevious(newNode);
+            head = newNode;
+        }
+        size++;
     }
 
     @Override
     public void addLast(T item) {
-
+        if (isEmpty()) {
+            tail = new ListNodeImpl<>(item);
+            head = tail;
+        } else {
+            ListNode<T> newNode = new ListNodeImpl<>(item);
+            tail.setNext(newNode);
+            newNode.setPrevious(tail);
+            tail = newNode;
+        }
+        size++;
     }
 
     @Override
     public T removeFirst() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        ListNode<T> removed = head;
+        head = head.getNext();
+        removed.setNext(null);
+        if (head != null) {
+            head.setPrevious(null);
+        }
+        size--;
+        return removed.getValue();
     }
 
     @Override
     public T removeLast() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        ListNode<T> removed = tail;
+        tail = tail.getPrevious();
+        removed.setPrevious(null);
+        if (tail != null) {
+            tail.setNext(null);
+        }
+        size--;
+        return removed.getValue();
     }
 
     @Override
     public T peekFirst() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return head.getValue();
     }
 
     @Override
     public T peekLast() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return tail.getValue();
     }
 
     @Override

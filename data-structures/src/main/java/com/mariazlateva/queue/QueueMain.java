@@ -1,7 +1,9 @@
-package com.mariazlateva.queue.impl;
+package com.mariazlateva.queue;
 
 import com.mariazlateva.iterator.Iterator;
-import com.mariazlateva.queue.Queue;
+import com.mariazlateva.queue.impl.EmptyQueueException;
+import com.mariazlateva.queue.impl.QueueImpl;
+import com.mariazlateva.queue.impl.QueueTrainingClass;
 import com.mariazlateva.util.ThreadColor;
 import com.mariazlateva.util.ThreadColorUtil;
 

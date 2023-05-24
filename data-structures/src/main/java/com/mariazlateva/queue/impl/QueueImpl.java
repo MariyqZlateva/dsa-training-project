@@ -17,7 +17,7 @@ public class QueueImpl<T> implements Queue<T> {
 
     public QueueImpl(int capacity) {
         if (capacity < 1) {
-            capacity = DEFAULT_CAPACITY;
+           increaseCapacity();
         }
         this.front = 0;
         this.back = 0;
@@ -92,8 +92,14 @@ public class QueueImpl<T> implements Queue<T> {
     }
 
     private int determineNewCapacity() {
-        //TODO : Consider defining strategy for increasing the capacity
-        return queue.length == 0 ? DEFAULT_CAPACITY : queue.length * 2;
+        int queueCapacity = queue.length;
+        if (queueCapacity == 0) {
+            return DEFAULT_CAPACITY;// to default capacity
+        } else if (queueCapacity < DEFAULT_CAPACITY * 2) {
+            return queueCapacity * 2; // doubled capacity
+        } else {
+            return queueCapacity + (queueCapacity / 2);// with 50 % increase of the capacity
+        }
     }
 
     private Object[] copyQ(int capacity) {

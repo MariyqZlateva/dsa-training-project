@@ -67,8 +67,8 @@ public class GenericSortTrainingTemplate {
         ThreadColorUtil.printInColor("Unsorted", ThreadColor.ANSI_RED);
         printArray(array, ThreadColor.ANSI_RED);
         genericSort.sort(array);
-        ThreadColorUtil.printInColor(msg, ThreadColor.ANSI_BLUE);
-        printArray(array, ThreadColor.ANSI_BLUE);
+        ThreadColorUtil.printInColor(msg, ThreadColor.ANSI_GREEN);
+        printArray(array, ThreadColor.ANSI_GREEN);
     }
 
     private static void printArray(Integer[] array, ThreadColor printColor) {
