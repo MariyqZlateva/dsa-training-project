@@ -1,8 +1,8 @@
-package com.mariazlateva.linkedlist.impl;
+package com.mariazlateva.list.linkedlist.impl;
 
 import com.mariazlateva.iterator.Iterator;
 import com.mariazlateva.iterator.impl.ListIterator;
-import com.mariazlateva.linkedlist.LinkedList;
+import com.mariazlateva.list.linkedlist.LinkedList;
 import com.mariazlateva.node.listnode.ListNode;
 import com.mariazlateva.node.listnode.impl.ListNodeImpl;
 

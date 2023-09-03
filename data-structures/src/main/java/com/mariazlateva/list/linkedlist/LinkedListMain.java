@@ -1,8 +1,9 @@
-package com.mariazlateva.linkedlist;
+package com.mariazlateva.list.linkedlist;
+
 
 import com.mariazlateva.iterator.Iterator;
-import com.mariazlateva.linkedlist.impl.LinkedListImpl;
-import com.mariazlateva.linkedlist.impl.LinkedListTrainingClass;
+import com.mariazlateva.list.linkedlist.impl.LinkedListImpl;
+import com.mariazlateva.list.linkedlist.impl.LinkedListTrainingClass;
 
 import java.util.Random;
 

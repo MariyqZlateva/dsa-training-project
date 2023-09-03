@@ -1,9 +1,10 @@
-package com.mariazlateva.linkedlist.impl;
+package com.mariazlateva.list.linkedlist.impl;
 
 import com.mariazlateva.iterator.Iterator;
-import com.mariazlateva.linkedlist.LinkedList;
+import com.mariazlateva.list.linkedlist.LinkedList;
 
 public class LinkedListTrainingClass<T> implements LinkedList<T> {
+
 
     @Override
     public void addFirst(T item) {
@@ -49,5 +50,4 @@ public class LinkedListTrainingClass<T> implements LinkedList<T> {
     public Iterator<T> iterator() {
         return null;
     }
-
 }

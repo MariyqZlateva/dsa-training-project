@@ -1,4 +1,4 @@
-package com.mariazlateva.linkedlist;
+package com.mariazlateva.list.linkedlist;
 
 import com.mariazlateva.iterator.Iterator;
 
